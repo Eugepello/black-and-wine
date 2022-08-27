@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import CartWidget from './CartWidget';
-import logo from '/Users/eugep/Desktop/black-and-wine/src/assets/img/logo-wine.png';
+import CartWidget from '../CartWidget/CartWidget';
+import logo from '../../assets/img/logo-wine.png';
 
 const Navbar = () => {
   return (

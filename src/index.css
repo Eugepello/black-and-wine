@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,8 @@
 }
 
 body {
-  font-family:  sans-serif;
-  background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url("./assets/img/glassofwine\ fondo.png") no-repeat center center fixed;
+	font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)), url("./assets/img/glassofwine\ fondo.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -22,13 +24,12 @@ body {
 	width: 10rem;
 	padding: 2rem 1rem 2rem 0;
   margin-right: 2rem;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 ul {
 	margin-right: 4rem;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	list-style: none;
 	text-transform: uppercase;
@@ -38,22 +39,88 @@ ul {
 .menuItem {
 	color: #fff;
 	text-decoration:none;
-	text-shadow: white 2px;
+	text-shadow: 2px;
 	font-size: 1.3rem;
 	margin-right: 2rem;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .menuItem:hover{
-  color: #7d3b61;
+  color: #602d4b;
 }
 
-span{
+.cartLogo{
 	color: #fff;
 }
 
-span:hover{
-  color: #7d3b61;
+.cartLogo:hover{
+  color: #602d4b;
   cursor: pointer;
 }
 
+
+/* MAIN */
+
+.titulo {
+	color: #fff;
+  text-align: center;
+  margin: 4rem;
+}
+
+.suma-resta {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.cantidad {
+  color: #fff;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+.symbolBtn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+}
+
+/* BUTTON COMPONENT*/
+
+.addBtn{
+  background: #b67ea0;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+	text-transform: uppercase;
+}
+
+.addBtn:hover{
+	color: #fff;
+}
+
+.addBtn::after{
+	content: "";
+  background: #602d4b;
+  position: absolute;
+  z-index: -1;
+  padding: 12px 20px;
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+
+.addBtn:hover::after{
+	transition: all 0.5s ease-out;
+	transform: scale(1, 1);
+}
