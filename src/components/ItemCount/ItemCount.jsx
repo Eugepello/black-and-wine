@@ -1,7 +1,11 @@
 import React, { useState} from 'react';
 import Button from '../Button/Button';
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock}) => {
+
+	const onAdd = () => {
+		console.log("Producto agregado al carrito");
+	}
 
 	const [counter, setCounter] = useState(1);
 
