@@ -19,10 +19,12 @@ const ItemCount = ({stock}) => {
 	};
 
   return (
-			<div className="suma-resta">
-				<p className="cantidad">Cantidad: {counter}</p>
-				<button onClick={suma} className="symbolBtn">+</button>
-				<button onClick={resta} className="symbolBtn">-</button>
+			<div className="itemCounter">
+				<p className="cantidad">{counter}</p>
+				<div id="suma-resta">
+					<button onClick={suma} className="symbolBtn">+</button>
+					<button onClick={resta} className="symbolBtn">-</button>
+				</div>
 				<div onClick={onAdd}>
 					<Button value="Agregar al carrito"/>
 				</div>

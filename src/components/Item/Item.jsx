@@ -1,16 +1,19 @@
 import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
-const Item = ({id, title, img, stock, description, price, category}) => {
+const Item = ({title, img, category, id}) => {
 
   return (
-    <div key={id} className="card">
-			<h4 className="nameProduct">{title}</h4>
-			<p className="descriptionProduct">{description}</p>
-			<img src={img} alt="Imagen del producto" className="img-fluid"/>
-			<p className="categoriaProduct">{category}</p>
-			<h3 className="priceProduct">$ {price.toLocaleString()}</h3>
-			<ItemCount stock={stock}/>
+		<div key={id} className="card">
+			<Link className="link" to={`/detail/${id}`}>
+				<h4 className="nameProduct">{title}</h4>
+			</Link>
+			<Link className="link" to={`/detail/${id}`}>
+				<img src={img} alt="Imagen del producto" className="img-fluid"/>
+			</Link>
+			<p className="categoryProduct">{category}</p>
+			<Link to={`/detail/${id}`}><Button value={"Ver detalle"}/></Link>
 		</div>
   )
 }

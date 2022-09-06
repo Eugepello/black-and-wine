@@ -1,26 +1,28 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../assets/img/logo-wine.png';
 
 const Navbar = () => {
   return (
     <nav className="nav-bar container-fluid">
-    <img src={logo} alt="Logo" className="logo"/>
+      <NavLink to='/'><img src={logo} alt="Logo" className="logo"/></NavLink>
       <ul className="panel">
         <li>
-          <a href="#" className="menuItem">Inicio</a>
+          <NavLink to='/' className="menuItem">Inicio</NavLink>
         </li>
         <li>
-          <a href="#" className="menuItem">Productos</a>
+          <NavLink to="/category/tintos" className="menuItem">Tintos</NavLink>
         </li>
         <li>
-          <a href="#" className="menuItem">Sobre Nosotros</a>
+          <NavLink to="/category/blancos" className="menuItem">Blancos</NavLink>
         </li>
         <li>
-          <a href="#" className="menuItem">Contacto</a>
+          <NavLink to="/category/rosados" className="menuItem">Rosados</NavLink>
         </li>
-        <CartWidget/>
+        <NavLink to='/cart'>
+          <CartWidget/>
+        </NavLink>
       </ul>
     </nav>
   )

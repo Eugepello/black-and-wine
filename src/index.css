@@ -47,7 +47,7 @@ ul {
 }
 
 .menuItem:hover{
-  color: #602d4b;
+  color: #823a64;
 }
 
 .cartLogo{
@@ -59,10 +59,19 @@ ul {
   cursor: pointer;
 }
 
+.active{
+  color: #823a64;
+}
 
-/* MAIN */
+
+/* -------MAIN-------- */
+
+.mainContainer{
+  margin-bottom: 10rem;
+}
 
 hr{
+  margin-top: 2rem;
   background-color: #fff;
   height: 10px;
 }
@@ -70,37 +79,55 @@ hr{
 .titulo {
 	color: #fff;
   text-align: center;
-  margin: 4rem;
+  margin: 3rem;
   text-shadow: 2px 2px 6px black;
 }
 
-.suma-resta {
+.itemCounter{
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#suma-resta{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
 }
 
 .cantidad {
   color: #fff;
-  font-size: x-large;
-  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  font-size: large;
 }
 
 .symbolBtn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: none;
 }
 
-/* BUTTON COMPONENT*/
+.card-detail{
+  color: #fff;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-detail img {
+  width: 30vw;
+}
+
+/* ---BUTTON COMPONENT--- */
 
 .addBtn{
   background: transparent;
   color: #fff;
-  padding: 12px 28px;
-  border-radius: 32px;
-  border: 2px solid #fff;
+  padding: 12px 12px;
+  border-radius: 20px;
+  border: 1px solid #fff;
   transform: translate(0);
   overflow: hidden;
 	text-transform: uppercase;
@@ -125,23 +152,39 @@ hr{
 }
 
 
-/*  CARD COMPONENT */
+/* ---CARD COMPONENT--- */
 
-.cardContainer{
+.cardsContainer{
   display: grid;
   justify-content: center;
   gap: 30px;
   grid-template-areas: "cardProduct cardProduct cardProduct cardProduct";
   color: #fff;
-  text-align: center;
+  margin-top: 3rem;
 }
 
 .card {
-  position: relative;
-  margin: 10px;
-  border-radius: 10px;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
-  height: 350px;
-  width: 250px;
+}
+
+.categoryProduct{
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.card:hover{
+  scale: 1.02;
+}
+
+.link{
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover{
+  color: #fff;
 }
