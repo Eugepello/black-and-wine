@@ -120,6 +120,27 @@ hr{
   width: 30vw;
 }
 
+.cartContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.linkBtn{
+  text-decoration: none;
+}
+
+.linkBtn:hover{
+  color: #fff;
+}
+
 /* ---BUTTON COMPONENT--- */
 
 .addBtn{
