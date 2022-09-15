@@ -14,7 +14,7 @@ const Form = () => {
   const handleChangeName = (e) => {
     setName(e.target.value);
   }
-  
+
   const handleChangeLastName = (e) => {
     setLastName(e.target.value);
   }
