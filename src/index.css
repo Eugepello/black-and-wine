@@ -122,10 +122,43 @@ hr{
 
 .cartContainer{
   display: flex;
+  justify-content: space-between;
   margin-top: 3rem;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   color: #fff;
+}
+
+.cartContainer h2 {
+  margin-bottom: 3rem;
+  text-decoration: underline;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+
+.cardCart{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardCart img{
+  width: 20vw;
+}
+
+.cardCart h4 {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.remover{
+  margin: 2rem;
+}
+
+.vaciar{
+  margin: 5rem 0 1rem 0;
 }
 
 form{
@@ -133,7 +166,7 @@ form{
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-top: 8rem;
+  margin: 8rem;
 }
 
 .linkBtn{

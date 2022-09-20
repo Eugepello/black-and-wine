@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import CartWidget from '../components/CartWidget/CartWidget';
 
 
 export const CartContext = createContext()
@@ -16,21 +17,11 @@ const CartProvider = ({children}) => {
   }
 
   const alreadyInCart = (id) => {
-      return cart.some((prod) => prod.id === id)
-    }
+    return cart.some((prod) => prod.id === id)
+  }
 
   const addingItem = (item, qty) => {
-    const updateCart = cart.map((prod) => {
-      if (prod.id === item.id) {
-        const cartUpdated = {
-          ...prod,
-          qty: qty,
-        };
-        return cartUpdated;
-      } else {
-        return prod;
-      }
-    });
+    const updateCart = cart.map((prod) => prod.id === item.id ? {...prod, qty: prod.qty + qty} : prod)
     setCart(updateCart)
   }
 
@@ -48,6 +39,12 @@ const CartProvider = ({children}) => {
     return producto?.qty
   }
 
+  const totalWidget = () => {
+    let quantity = 0
+    cart.forEach((product) => quantity += product.qty)
+    return quantity
+  }
+
   const totalPrice = () => {
     let precio = 0
     cart.forEach((item) => precio += item.qty * item.price)
@@ -62,6 +59,7 @@ const CartProvider = ({children}) => {
         emptyCart,
         removeItem,
         totalPrice,
+        totalWidget,
         qtyItem}}>
 
       {children}
