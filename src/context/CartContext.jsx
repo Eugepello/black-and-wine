@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react';
-import CartWidget from '../components/CartWidget/CartWidget';
 
 
 export const CartContext = createContext()
@@ -52,7 +51,7 @@ const CartProvider = ({children}) => {
   }
 
   return (
-    <CartContext.Provider
+    <CartContext.Provider 
       value={{ 
         addToCart,
         cart,

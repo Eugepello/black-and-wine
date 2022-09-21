@@ -66,6 +66,11 @@ ul {
 
 /* -------MAIN-------- */
 
+.loader{
+  display: block;
+  margin: 35vh auto;
+}
+
 .mainContainer{
   margin-bottom: 10rem;
 }

@@ -1,31 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { productos } from '../../mock/productos';
 import ItemList from '../ItemList/ItemList';
+import ClockLoader from 'react-spinners/ClockLoader';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../services/firebaseConfig';
 
 const ItemListContainer = ({bienvenida}) => {
 
 	const [items, setItems] = useState([]);
+	const [isLoading, setIsLoading] = useState(true)
 
-	const { categoryName } = useParams();
-	console.log(categoryName);
+	const { categories } = useParams();
 
 	useEffect(() => {
-		const getItems = () => new Promise((resolve) => {
-			const filteredItems = productos.filter((prod) => prod.category === categoryName);
+		const itemCollection = collection(db, 'productos');
+		const filtered = categories
+		? query(itemCollection, where('category', '==', categories))
+		: itemCollection
 
-			setTimeout(() => resolve(categoryName ? filteredItems : productos), 1000)
-		});
-
-		getItems()
-		.then(data => setItems(data))
+		getDocs(filtered)
+		.then(data => {
+			const products = data.docs.map((p) => {
+				return {
+					id: p.id,
+					...p.data()
+				}
+			});
+			setItems(products)
+			setIsLoading(false)
+		})
 		.catch(error => console.error(error))
-	}, [categoryName])
+	}, [categories])
 
 	return (
-		<main className="container-fluid mainContainer">
-			<h2 className="titulo">{bienvenida}</h2>
-			<ItemList items={items} />
+		<main className='container-fluid mainContainer'>
+			{
+				isLoading 
+				?	<ClockLoader className='loader' color={'#fff'} size={200} />
+				: <>
+						<h2 className='titulo'>{bienvenida}</h2>
+						<ItemList items={items} />
+					</>
+			}
 		</main>
 	)
 }

@@ -16,7 +16,7 @@ function App() {
           element={<ItemListContainer bienvenida="Black and Wine" />} />
 
         <Route
-          path='/category/:categoryName' 
+          path='/category/:categories' 
           element={<ItemListContainer/>} />
 
         <Route

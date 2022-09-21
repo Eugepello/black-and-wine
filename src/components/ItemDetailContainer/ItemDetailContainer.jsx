@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { productos } from '../../mock/productos';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import ClockLoader from 'react-spinners/ClockLoader';
+import { db } from '../../services/firebaseConfig';
+import { getDoc, doc, collection } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   const [items, setItems] = useState({});
+  const [isLoading, setIsLoading] = useState(true)
 
   const { idItem } = useParams();
 
-  const idItemNum = Number(idItem);
-
-  console.log(idItemNum);
-
   useEffect(() => {
-    const getItems = () => new Promise(resolve => {
-      setTimeout(() => {
-        resolve(productos.find((productos => productos.id === idItemNum)))
-      }, 500)
+    const itemCollection = collection(db, 'productos')
+    const refer = doc(itemCollection, idItem)
+    getDoc(refer)
+    .then(data => {
+      setItems({
+        id: data.id,
+        ...data.data()
+      })
+      setIsLoading(false)
     })
-
-    getItems()
-    .then(data => setItems(data))
-    .catch((error) => console.error(error))
-  }, [idItemNum]);
+  }, [idItem]);
 
   return (
     <div className="cardsContainer container">
-      <ItemDetail items={items}/>
+      {
+        isLoading
+        ? <ClockLoader className='loader' color={'#fff'} size={200} />
+        :<ItemDetail items={items}/>
+      }
     </div>
   )
 };
