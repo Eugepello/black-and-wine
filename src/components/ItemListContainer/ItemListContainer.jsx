@@ -33,7 +33,7 @@ const ItemListContainer = ({bienvenida}) => {
 	}, [categories])
 
 	return (
-		<main className='container-fluid mainContainer'>
+		<main className='mainContainer container-fluid'>
 			{
 				isLoading 
 				?	<ClockLoader className='loader' color={'#fff'} size={200} />

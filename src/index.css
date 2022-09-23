@@ -114,14 +114,14 @@ hr{
   border: none;
 }
 
-.card-detail{
+.cardDetail{
   color: #fff;
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
 }
 
-.card-detail img {
+.cardDetail img {
   width: 30vw;
 }
 
