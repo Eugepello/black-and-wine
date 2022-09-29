@@ -2,7 +2,7 @@
 
 Un e-commerce de vinos desarrollado con React JS, que busca proporcionar una experiencia de usuario agradable e intuitiva.
 
-Deploy de la aplicación:
+Deploy de la aplicación: https://black-and-wine-nap0qgn5e-eugepello.vercel.app
 
 
 <h2>Resumen de funcionalidades de la aplicación</h3>
