@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<h1>Black and Wine 🍷</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un e-commerce de vinos desarrollado con React JS, que busca proporcionar una experiencia de usuario agradable e intuitiva.
 
-## Available Scripts
+Deploy de la aplicación:
 
-In the project directory, you can run:
 
-### `npm start`
+<h2>Resumen de funcionalidades de la aplicación</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Cuenta con un stock de productos almacenados en <a href="https://firebase.google.com/" target="_blank">Firebase</a>, que son llamados y guardados a partir de Hooks como useState y useEffect.<br>
+También cuenta con una navegación entre el home, las categorías, el carrito y cada producto con su ID.
+El carrito cuenta con sus respectivas lógicas de agregado, vaciado, eliminar producto específico y finalmente, la compra. Esta última retorna un ID único, generado para que el usuario lo guarde y pueda hacer su seguimiento.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://media.giphy.com/media/3zfox4LvqnIas/giphy.gif" alt="gif">
 
-### `npm test`
+<h2>Tecnologías utilizadas (Frameworks, librerías, base de datos)</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- <a href="https://reactrouter.com/en/main" target="_blank">React Router Dom</a> (Routing)
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> (Diseño general del layout)
+- <a href="https://www.npmjs.com/package/react-spinners" target="_blank">React Spinners</a> (Loaders)
+- <a href="https://firebase.google.com/" target="_blank">Firebase</a> (Base de datos)
 
-### `npm run build`
+<strong>Aclaración:</strong> La aplicación está creada con <a href="https://create-react-app.dev/" target="_blank">Create React App</a> y adaptada a las necesidades del proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4>¿Querés levantar el proyecto localmente?</h4>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+git clone https://github.com/Eugepello/black-and-wine-pello.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Otra manera de hacerlo es descargándolo como archivo ZIP desde Github.
 
-### `npm run eject`
+<hr>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h3>About me</h3>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mi nombre es Eugenio Pello, soy un Front End Web Developer y trabajo día a día para seguir ampliando mis conocimientos sobre este enorme mundo que es React. Te dejo mis redes sociales aquí debajo para que podamos seguirnos y contactarnos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h3>¡Gracias por tu tiempo!</h3>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
 
-## Learn More
+<a href="https://www.linkedin.com/in/eugenio-pello/" target="_blank"><img src="https://img.icons8.com/color/2x/linkedin.png" alt="Linkedin"></a>
+<a href="https://www.instagram.com/eugepello/?hl=es-la" target="_blank"><img src="https://img.icons8.com/fluency/2x/instagram-new.png" alt="Instagram"></a>
+<a href="mailto:eugepello@gmail.com"><img src="https://img.icons8.com/color/2x/gmail-new.png" alt="Gmail"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://media.giphy.com/media/3osxYrQixUHdeOyyuA/giphy.gif" alt="gif">

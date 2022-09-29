@@ -24,7 +24,7 @@ const Cart = () => {
   if (cart.length === 0) {
     return <Link style={{color: '#fff', textAlign: 'center'}} to="/">
         <h1 style={{marginTop: '5rem', marginBottom: '2rem'}}>El carrito está vacío...</h1>
-        <p style={{fontSize:'22px'}}>¡Volvé a la <strong>tienda</strong> para ver todos nuestros productos!</p>
+        <p style={{fontSize:'22px', marginBottom: '15rem'}}>¡Volvé a la <strong>tienda</strong> para ver todos nuestros productos!</p>
       </Link>
   }
 

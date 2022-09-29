@@ -28,7 +28,7 @@ body {
 	cursor: pointer;
 }
 
-ul {
+.panel{
 	margin-right: 4rem;
 	display: flex;
 	align-items: center;
@@ -61,6 +61,45 @@ ul {
 
 .active{
   color: #823a64;
+}
+
+
+/* -------FOOTER------- */
+
+footer {
+  width: 100%;
+  height: 17vh;
+  background-color: rgba(5, 7, 12, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.ulFooter{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-transform: uppercase;
+	gap: 25px;
+}
+
+.footerItem{
+  color: #fff;
+	text-decoration:none;
+	font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footerItem:hover{
+  color: #823a64;
+}
+
+.lorem{
+  width: 80vw;
+  margin-top: 1rem;
 }
 
 
